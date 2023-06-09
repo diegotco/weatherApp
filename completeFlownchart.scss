@@ -1,0 +1,39 @@
+start
+ |
+ |---cron.js
+ |     |
+ |     |---fetchWeatherData()
+ |     |     |
+ |     |     |---axios.get(url)
+ |     |           |
+ |     |           |---return weatherData
+ |     |
+ |     |---job (cron.schedule)
+ |
+ |---cityTime.js
+ |     |
+ |     |---currentDay()
+ |           |
+ |           |---fetchWeatherData()
+ |           |
+ |           |---date conversion
+ |           |
+ |           |---return dateOnly and timeOnly
+ |
+ |---sendingDataToGoogleSheet.js
+       |
+       |---main()
+             |
+             |---_getGoogleSheetClient()
+             |
+             |---fetchWeatherData()
+             |
+             |---currentDay()
+             |
+             |---_writeGoogleSheet()
+                   |
+                   |---googleSheetClient.spreadsheets.values.append()
+                         |
+                         |---Append data to Google Sheet
+ |
+end
